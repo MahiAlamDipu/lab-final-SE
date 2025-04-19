@@ -3,10 +3,9 @@ project(FactoryMethodExample)
 
 set(CMAKE_CXX_STANDARD 14)
 
-# Add the main executable
 add_executable(FactoryMethod main.cpp)
 
-# Setup Google Test
+
 include(FetchContent)
 FetchContent_Declare(
   googletest

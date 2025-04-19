@@ -1,11 +1,12 @@
 cmake_minimum_required(VERSION 3.10)
-project(FactoryMethodExample)
+project(FactoryMethodPattern)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(FactoryMethod main.cpp)
+# Add the main executable
+add_executable(FactoryMethodLabTest main.cpp)
 
-
+# Setup Google Test
 include(FetchContent)
 FetchContent_Declare(
   googletest
@@ -16,9 +17,9 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 # Add the test executable
-add_executable(FactoryMethodTests tests/ProductFactoryTests.cpp)
-target_link_libraries(FactoryMethodTests gtest_main)
+add_executable(VehicleTests tests/VehicleTests.cpp)
+target_link_libraries(VehicleTests gtest_main)
 
 # Register tests
 include(GoogleTest)
-gtest_discover_tests(FactoryMethodTests)
+gtest_discover_tests(VehicleTests)

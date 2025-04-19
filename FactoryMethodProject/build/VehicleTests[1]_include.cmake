@@ -1,0 +1,5 @@
+if(EXISTS "/home/mahi/Documents/Lab Final/FactoryMethodProject/build/VehicleTests[1]_tests.cmake")
+  include("/home/mahi/Documents/Lab Final/FactoryMethodProject/build/VehicleTests[1]_tests.cmake")
+else()
+  add_test(VehicleTests_NOT_BUILT VehicleTests_NOT_BUILT)
+endif()
